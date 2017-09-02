@@ -1,2 +1,3 @@
 # Projeto_OO
-Profeto de orientação objeto FEI
+Profeto de programação orientada a objeto (FEI)
+Criação de um progama para faculdade de organizar horarios de professores.
