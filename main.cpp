@@ -4,6 +4,12 @@
 #include "facu.h"
 #include "prof.h"
 
+/*
+codificado por Igor do Nascimento Alves e Augusto Turolla
+algoritimo de Alexandre Kenjy de Siqueira Kumagai e Giovane Jose Fernandes 
+
+
+*/
 using namespace std;
 
 int somaDias(int ind, prof p[3]){
