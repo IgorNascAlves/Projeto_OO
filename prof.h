@@ -12,8 +12,17 @@ class prof{
 					total += this->s.get_dia(i);
 				return total;
 			}
-        	semana s;
+			int pega_dia(int ind){
+                s.get_dia(ind);
+            }
+            void set_semana(int i, int n){
+                s.set_semana(i,n);
+            }
+        	void show_semana(){
+                s.show_semana();
+            }
 		protected:
+            semana s;
 			string nome;
 			int qt_aulas;
 };
