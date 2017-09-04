@@ -1,5 +1,8 @@
 #include "semana.h"
 #include "prof.h"
+/*
+ Implementacao do algoritimo dentro da classe Faculdade
+ */
 class facu{
     soma_dias(int num, prof p(num)){
         int total = 0;
