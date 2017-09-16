@@ -1,0 +1,99 @@
+#include <cstdlib>
+#include <iostream>
+#include <string>
+#include "facu.h"
+#include "prof.h"
+#include <vector>
+
+using namespace std;
+
+int somaDias_facu(facu f){
+		int total = 0;
+		for(int i=0;i<12;i++)
+			total += f.s.get_dia(i);
+		return total;
+	}
+
+int somaDias(int ind, vector<prof> p){
+		int total = 0;
+		for(int i=0;i<3;i++)
+			total += p[i].s.get_dia(ind);
+		return total;
+	}
+int dia_menos_disp(int num, vector<prof> p){
+         int menor = 0;
+         int j=0;
+         for(int i=11;i>0;i--)
+             if(somaDias(j,p)>somaDias(i,p))
+                 j = i;
+
+         return j;
+}
+int soma_semana(){
+}
+int main(int argc, char *argv[])
+{
+	facu f;
+	vector <prof> p;
+	p.push_back(prof());
+	p.at(0).set_prof("Pedro",5);
+	p.push_back(prof());
+	p.at(1).set_prof("Paulo",1);
+	p.push_back(prof());
+	p.at(2).set_prof("Igor",2);
+	
+	for(int i=0;i<5;i++)
+		p[0].s.set_semana(i,1);
+
+	for(int i=7;i<12;i++)
+		p[1].s.set_semana(i,1);
+		
+    for(int i=6;i<8;i++)
+		p[2].s.set_semana(i,1);
+		
+	for(int i=0;i<12;i++)
+	    f.s.set_semana(i,1);
+
+	///*
+	cout<<"Prof "<<p[0].get_nome()<<" tem "<<p[0].get_s_livre()<<" dias livres: "<<endl<<endl;
+	//p[0].s.show_semana();
+	
+	cout<<"Prof "<<p[1].get_nome()<<" tem "<<p[1].get_s_livre()<<" dias livres: "<<endl<<endl;
+	//p[1].s.show_semana();
+	
+	cout<<"Prof "<<p[1].get_nome()<<" tem "<<p[2].get_s_livre()<<" dias livres: "<<endl<<endl;
+	//p[2].s.show_semana();
+	
+	cout<<endl;
+	
+
+	for(int i=0; i <12; i++)
+		cout<<"soma dia("<<i<<") "<<somaDias(i,p)<<endl;
+	//*/
+
+	cout<<endl<<"Dia menos disp "<<dia_menos_disp(0,p)<<endl<<endl;
+	
+	int i=11;
+	while(somaDias_facu(f)){
+		//f.s.show_semana();
+		int ind = dia_menos_disp(0,p);
+		int a= 0;
+		for(int j=1;j< p.size();j++)
+			if(p[a].get_s_livre()>p[i].get_s_livre())
+			    a = i;
+			else if(p[a].get_s_livre() == p[i].get_s_livre())
+			    if(p[a].get_aulas()<p[i].get_aulas())
+			        a = i;
+		f.s.set_semana(ind,0);
+		for(int j=0;j<p.size();j++)
+		    p[1].s.set_semana(j,0);
+		p[a].set_aulas(p[a].get_aulas()-1);
+		cout<<endl<<somaDias_facu(f)<<endl;
+		//f.s.set_semana(i,0);
+		//i--;
+
+	}
+	
+	system("pause");
+	return 0;
+}
