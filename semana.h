@@ -1,23 +1,19 @@
-#include <cstdlib>
+/*
+De: Igor do Nascimento Alves
+Data: 21/Outubro/2017
+Objetivo: Interface da Classe Semana
+*/
+#ifndef SEMANA_H
+#define SEMANA_H
+#include <iostream>
 using namespace std;
-class semana{
+class Semana{
 	public:
-		semana(){
-			for(int i=0;i<12;i++)
-			    dia[i] = 0;
-		}
-		void set_semana(int dia, int disp){
-			this->dia[dia] = disp;
-		}
-		int get_dia(int ind){
-			return dia[ind];
-		}
-		void show_semana(){
-            cout<<"| seg0| seg1| ter0| ter1| qua0| qua1| qui0| qui1| sex0| sex1| sab0| sab1\n";
-			for(int i=0;i<12;i++)
-				cout<<"|   "<<get_dia(i)<<" ";
-			cout<<endl;
-		}
-	protected:
-		int dia[12];
+		Semana();//cria uma semana com dias em ZERO
+		void setDia(int,int);//set da semana(dia, valor)
+		int getDia(int);//retorna 1 se dia ocupado e zero se livre (dia)
+		void showSemana();//mostra a semana da facu
+	private:
+		int dia[12];// dias da semana
 };
+#endif //def SEMANA_H

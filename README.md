@@ -1,3 +1,2 @@
-# Projeto_OO
-Projeto de programação orientada a objeto (FEI)
-Criação de um progama para faculdade de organizar horarios de professores.
+# Projeto_OOV2
+Segunda versao da implementação do algoritimo de escolha de horarios para faculdades.

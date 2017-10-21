@@ -1,35 +1,34 @@
-#include "semana.h"
-#include "prof.h"
 /*
- Implementacao do algoritimo dentro da classe Faculdade
- */
-class facu{
-    soma_dias(int num, prof p(num)){
-        int total = 0;
-        for(int i=0;i<num;i++)
-            for(int j=0;j<12;j++)
-                total += p(i).pega_dia(j);
-        return total;
-    }
-    int dia_menos_disp(int num, prof p(num)){
-        menor = 0;
-        int j=0;
-        for(int i=11;i>0;i--)
-            if(somaDias(j,p)>somaDias(i,p))
-                j = i;
-        
-        return j;
-    }
-    facu(int num, prof p(num)){
-        while(soma_dias() != 0)
-            int a;
-            int ind = dia_menos_disp();
-            if(somaDias(ind,p) == 0)
-                for(int i=0;i<num;i++)
-                    if(prof(i).pega_dia(ind) == 1)
-                        
-                        
-    }
-	protected:
-		semana s;
+De: Igor do Nascimento Alves
+Data: 12/Outubro/2017
+Objetivo: Interface da Classe Facu
+*/
+#ifndef FACU_H
+#define FACU_H
+#include <iostream>
+#include <vector>
+#include <cstring>
+#include "prof.h"
+#include "semana.h"
+using namespace std;
+class Facu{
+	public:
+		Facu();
+		void setDia(int,int);
+		int getDia(int);
+		void showSemana();
+		bool semanaPronta();
+		void criaProf(string,int);
+		void setDiaProfV(string,int);
+		void setDiaProfF(string,int);
+		int diaMenosDisp();
+		void limpaDiasProf(int);
+		void showSemanaProf(string);
+		int achaProf(string);
+		void menosDiaProf(string);
+		int getQuantProf();
+	private:
+		Semana s;
+		vector<Prof> p; 
 };
+#endif //def FACU_H

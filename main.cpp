@@ -1,56 +1,72 @@
-#include <cstdlib>
-#include <iostream>
-#include <string>
-#include "facu.h"
-#include "prof.h"
-
 /*
-codificado por Igor do Nascimento Alves e Augusto Turolla
-algoritimo de Alexandre Kenjy de Siqueira Kumagai e Giovane Jose Fernandes 
-
-
+De: Igor do Nascimento Alves
+Data: 21/Outubro/2017
+Objetivo: Segunda versão da implementacao do Algoritimo do projeto de Orientacao Objeto
 */
-using namespace std;
+#include <iostream>
+#include "semana.h"
+#include "prof.h"
+#include "facu.h"
+int main(){
 
-int somaDias(int ind, prof p[3]){
-		int total = 0;
-		for(int i=0;i<3;i++)
-			total += p[i].pega_dia(ind);
-		return total;
+	Facu f;
+	int ind;
+	while(!f.semanaPronta()){
+		ind = f.diaMenosDisp();
+		
 	}
-
-int main(int argc, char *argv[])
-{
-		
-	prof p[3];
 	
-	p[0].set_prof("Paulo",5);
-	p[1].set_prof("Pedro",1);
-	p[2].set_prof("popo",2);
-	
-	for(int i=0;i<5;i++)
-		p[0].set_semana(i,1);
-
-	for(int i=4;i<12;i++)
-		p[1].set_semana(i,1);
-		
-    for(int i=3;i<8;i++)
-		p[2].set_semana(i,1);
-	
-	cout<<"dias livres: "<<p[0].get_s_livre()<<endl;
-	p[0].show_semana();
-	
-	cout<<"dias livres: "<<p[1].get_s_livre()<<endl;
-	p[1].show_semana();
-	
-	cout<<"dias livres: "<<p[1].get_s_livre()<<endl;
-	p[2].show_semana();
-	
-	for(int i=0; i <12; i++)
-		cout<<"soma dia("<<i<<") "<<somaDias(i,p)<<endl;
-		
-		
-
-	
+	std::cout<<"Hello World"<<std::endl;
 	return 0;
+
+	/* TESTE CLASSE SEMANA
+	Semana s;
+	for(int i=0;i<12;i = i + 2)
+		s.setDia(i,1);
+	int a=0;
+	s.setDia(a,0);
+	std::cout<<"O DIA "<<a<<" TEM VALOR "<<s.getDia(a)<<endl;
+	s.showSemana();
+	*/
+	
+	/* TESTE CLASSE PROF
+	Prof p("Paulo",5);
+	for(int i=0;i<12;i = i + 2)
+		p.setDia(i,1);
+	int a=2;
+	p.setDia(a,0);
+	std::cout<<"O DIA "<<a<<" TEM VALOR "<<p.getDia(a)<<endl;
+	p.showSemana();
+	
+	p.setProf("PS",5);
+    p.setQuantAulas(4);
+	std::cout<<"O numero de aulas que o "<<p.getProf()<<" tem que dar eh "<<p.getQuantAulas()<<" e tem "<<p.getDiasDisp()<<" dias disponiveis"<<endl;
+   	p.limparSemana();
+   	
+ 	p.showSemana();
+	*/
+	
+	/* TESTE CLASSE FACULDADE
+	Facu f;
+	for(int i=0;i<12;i = i + 2)
+		f.setDia(i,1);
+	int a=0;
+	f.setDia(a,0);
+	std::cout<<"O DIA "<<a<<" TEM VALOR "<<f.getDia(a)<<endl;
+	f.showSemana();    
+   
+	f.criaProf("PS",4);
+	for(int i=0;i<12;i++)
+		f.setDiaProf("PS",i,1);
+	f.showSemanaProf("PS");
+	f.limpaDiasProf(2);
+	f.setDiaProf("PS",1,3);
+	f.showSemanaProf("PS");
+	std::cout<<"O dia menos disponivel eh "<<f.diaMenosDisp()<<endl;
+	
+    if(f.semanaPronta())
+    	std::cout<<"Esta pronta a semana"<<endl;
+    else
+    	std::cout<<"Nao esta pronta a semana"<<endl; 
+	*/
 }
