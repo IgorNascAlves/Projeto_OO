@@ -23,8 +23,8 @@ class Prof{
     	void menosQuantAulas();// -1 no quant_aulas e se ZERO zeraSemana
 		//funcoes para gerenciar vetor de ind de dias disp
 		
-	private:
-		vector<INTEGER> indDisp; //ind do dia disponivel 
+		vector<int> indDisp; //ind do dia disponivel
+	private: 
 		string nome;
 		int quantAulas;
 		Semana s;

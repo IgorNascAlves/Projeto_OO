@@ -34,7 +34,7 @@ void Facu::setDiaProfV(string nome,int i){
 
 			int ind = achaProf(nome);
 			p[ind].setDia(i,1);
-			p[ind].indDisp.push_back(INTEGER(i));
+			p[ind].indDisp.push_back(int(i));
 }
 int Facu::diaMenosDisp(){
 	int indDia = 0;
