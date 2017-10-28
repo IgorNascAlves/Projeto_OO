@@ -14,19 +14,19 @@ using namespace std;
 class Facu{
 	public:
 		Facu();
-		void setDia(int,int);
-		int getDia(int);
-		void showSemana();
-		bool semanaPronta();
-		void criaProf(string,int);
-		void setDiaProfV(string,int);
-		void setDiaProfF(string,int);
-		int diaMenosDisp();
-		void limpaDiasProf(int);
-		void showSemanaProf(string);
-		int achaProf(string);
-		void menosDiaProf(string);
-		int getQuantProf();
+		void setDia(int,int);//Set dia da semana da Facu
+		int getDia(int);//Pega valor de um dia da Facu
+		void showSemana();//Mostra semana da Facu
+		bool semanaPronta();//Verifica se todos os profs tem 0 aulas
+		void criaProf(string,int);//Cria objeto prof (recebe nome e quantAulas)
+		void setDiaProfV(string,int);//Set dia como disp(1)
+		void setDiaProfF(string,int);//Set dia como ñ disp(0)
+		int diaMenosDisp();//retorna dia menos disp
+		void limpaDiasProf(int);//limpa vertical(dia dos profs)
+		void showSemanaProf(string);//mostra semana de um prof
+		int achaProf(string);//acha ind do professor
+		void menosDiaProf(int);//diminui quantAulas ou limpa Semana
+		int getQuantProf(int);// retorna quant profs
 	private:
 		Semana s;
 		vector<Prof> p; 

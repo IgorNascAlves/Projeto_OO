@@ -43,7 +43,15 @@ void Prof::limparSemana(){
 		s.setDia(i,0);
 }
 void Prof::menosQuantAulas(){
-	quantAulas -= 1;
-	if(quantAulas == 0)
+	if(quantAulas > 1)
+		quantAulas -= 1;
+	else{
+		quantAulas = 0;
 		limparSemana();
+}
+void Prof::setIndDisp(int i){
+	indDisp.push_back(int(i));
+}
+int Prof::getIndDisp(){
+	return indDisp[0];
 }

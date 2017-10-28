@@ -7,18 +7,14 @@ Objetivo: Desenvolvimento do algortimo
 do{
 CasoBase();
 }while(!f.semanaPronta())
-/*
-De: Igor do Nascimento Alves
-Data: 12/Outubro/2017
-Objetivo: Interface da Classe Facu
-*/
 
 
 void CasoBase(){
 	for(int i=0;i<f.getQuantProf();i++)
 	if(f.getDiasDisp(i) == 1){
-		f.setDia(f.indDisp[0],1);
-		f.limpaDiasProf()
+		f.setDia(f.getIndDisp(i),i);
+		f.limpaDiasProf(f.getIndDisp(i));
+		f.menosDiaProf(i);
 		//zerar professor e a disp semana
 	}
 }

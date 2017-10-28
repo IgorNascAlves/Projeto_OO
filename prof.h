@@ -21,10 +21,11 @@ class Prof{
     	int getDiasDisp();//soma e retorna os dias de valor 1 da semana
     	void limparSemana();// set semana em 0
     	void menosQuantAulas();// -1 no quant_aulas e se ZERO zeraSemana
-		//funcoes para gerenciar vetor de ind de dias disp
+		void setIndDisp(int);//funcoes para gerenciar vetor de ind de dias disp
+   		int getIndDisp();//Pega o ind do dia disp
 		
-		vector<int> indDisp; //ind do dia disponivel
 	private: 
+		vector<int> indDisp; //ind do dia disponivel
 		string nome;
 		int quantAulas;
 		Semana s;

@@ -34,7 +34,7 @@ void Facu::setDiaProfV(string nome,int i){
 
 			int ind = achaProf(nome);
 			p[ind].setDia(i,1);
-			p[ind].indDisp.push_back(int(i));
+			p[ind].setIndDisp(i);
 }
 int Facu::diaMenosDisp(){
 	int indDia = 0;
@@ -64,9 +64,12 @@ int Facu::achaProf(string nome){
 			if(p[ind].getProf() == nome)
 				return ind;
 }
-void Facu::menosDiaProf(string nome){
-	p[achaProf(nome)].menosQuantAulas();
+void Facu::menosDiaProf(int ind){
+	p[ind].menosQuantAulas();
 }
 int Facu::getQuantProf(){
 	return p.size();
+}
+int Facu::getIndDisp(int i){
+	return p[i].getIndDisp();
 }
