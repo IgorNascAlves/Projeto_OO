@@ -1,32 +1,42 @@
 /*
-De: Igor do Nascimento Alves
-Data: 21/Outubro/2017
+De: Igor do Nascimento Alves, Alexandre Kenjy de Siqueira Kumagai 
+Data: 28/Outubro/2017
 Objetivo: Segunda versão da implementacao do Algoritimo do projeto de Orientacao Objeto
 */
 #include <iostream>
 #include "semana.h"
 #include "prof.h"
 #include "facu.h"
-void CasoBase(Facu f){
-	for(int i=0;i<f.getQuantProf();i++)
-		if(f.getDiasDisp(i) == 1){
-			f.setDia(f.getIndDisp(i),i);
-			f.limpaDiasProf(f.getIndDisp(i));
-			f.menosDiaProf(i);
+void CasoBase(Facu* f){
+	
+	for(int i=0;i<(*f).getQuantProf();i++){
+		if((*f).getDiasDisp(i) == 1){
+			(*f).setDia((*f).getIndDisp(i),i+1);
+			(*f).limpaDiasProf((*f).getIndDisp(i));
+			(*f).menosDiaProf(i);
 		}
+	}
 }
 int main(){
 	Facu f;
+	
+	f.criaProf("Igor",1);
+	f.setDiaProfV("Igor",7);
+	f.showSemanaProf("Igor");
+	
 	f.criaProf("PS",1);
-	f.setDiaProfV("PS",10);
+	f.setDiaProfV("PS",2);
 	f.showSemanaProf("PS");
+	
 	f.criaProf("Gui",1);
 	f.setDiaProfV("Gui",10);
 	f.showSemanaProf("Gui");
+	
 	f.showSemana();
 	do{
-		CasoBase(f);
+		CasoBase(&f);
 	}while(!f.semanaPronta());
+	f.showSemanaProf("Igor");
 	f.showSemanaProf("PS");
 	f.showSemanaProf("Gui");
 	f.showSemana();

@@ -1,6 +1,6 @@
 /*
 De: Igor do Nascimento Alves
-Data: 12/Outubro/2017
+Data: 28/Outubro/2017
 Objetivo: Interface da Classe Facu
 */
 #ifndef FACU_H

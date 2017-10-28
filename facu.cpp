@@ -1,6 +1,6 @@
 /*
 De: Igor do Nascimento Alves
-Data: 21/Outubro/2017
+Data: 28/Outubro/2017
 Objetivo: Implementacao da Classe Facu
 */
 #include "facu.h"

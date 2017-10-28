@@ -1,6 +1,6 @@
 /*
 De: Igor do Nascimento Alves
-Data: 21/Outubro/2017
+Data: 28/Outubro/2017
 Objetivo: Implementacao da classe Professor
 */
 #include "prof.h"
@@ -44,12 +44,14 @@ void Prof::limparSemana(){
 		s.setDia(i,0);
 }
 void Prof::menosQuantAulas(){
+	std::cout<<"ERA "<<getProf()<<" "<<getQuantAulas()<<endl;
 	if(quantAulas > 1)
 		quantAulas -= 1;
 	else{
 		quantAulas = 0;
 		limparSemana();
 	}
+	std::cout<<"EH "<<getProf()<<" "<<getQuantAulas()<<endl;
 }
 void Prof::setIndDisp(int i){
 	indDisp.push_back(int(i));

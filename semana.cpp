@@ -1,6 +1,6 @@
 /*
 De: Igor do Nascimento Alves
-Data: 21/Outubro/2017
+Data: 28/Outubro/2017
 Objetivo: Implementacao da classe Semana
 */
 #include "semana.h"
@@ -11,7 +11,7 @@ Semana::Semana(){
 }
 void Semana::setDia(int i, int valor){
 	this->dia[i] = valor;
-	std::cout<<"O DIA "<<i<<" VALE "<<this->dia[i]<<" AGORA"<<endl;
+	//std::cout<<"O DIA "<<i<<" VALE "<<this->dia[i]<<" AGORA"<<endl;
 }
 int Semana::getDia(int i){
 	return this->dia[i];
