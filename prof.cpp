@@ -16,6 +16,7 @@ int Prof::getDia(int i){
 		return s.getDia(i);
 }
 void Prof::showSemana(){
+	std::cout<<nome<<endl;
 	s.showSemana();
 }
 void Prof::setProf(string nome,int quantAulas){
@@ -48,6 +49,7 @@ void Prof::menosQuantAulas(){
 	else{
 		quantAulas = 0;
 		limparSemana();
+	}
 }
 void Prof::setIndDisp(int i){
 	indDisp.push_back(int(i));

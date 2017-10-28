@@ -26,7 +26,9 @@ class Facu{
 		void showSemanaProf(string);//mostra semana de um prof
 		int achaProf(string);//acha ind do professor
 		void menosDiaProf(int);//diminui quantAulas ou limpa Semana
-		int getQuantProf(int);// retorna quant profs
+		int getQuantProf();// retorna quant profs
+		int getIndDisp(int);
+		int getDiasDisp(int);
 	private:
 		Semana s;
 		vector<Prof> p; 

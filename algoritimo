@@ -11,10 +11,9 @@ CasoBase();
 
 void CasoBase(){
 	for(int i=0;i<f.getQuantProf();i++)
-	if(f.getDiasDisp(i) == 1){
-		f.setDia(f.getIndDisp(i),i);
-		f.limpaDiasProf(f.getIndDisp(i));
-		f.menosDiaProf(i);
-		//zerar professor e a disp semana
-	}
+		if(f.getDiasDisp(i) == 1){
+			f.setDia(f.getIndDisp(i),i);
+			f.limpaDiasProf(f.getIndDisp(i));
+			f.menosDiaProf(i);
+		}
 }

@@ -7,8 +7,32 @@ Objetivo: Segunda versão da implementacao do Algoritimo do projeto de Orientaca
 #include "semana.h"
 #include "prof.h"
 #include "facu.h"
+void CasoBase(Facu f){
+	for(int i=0;i<f.getQuantProf();i++)
+		if(f.getDiasDisp(i) == 1){
+			f.setDia(f.getIndDisp(i),i);
+			f.limpaDiasProf(f.getIndDisp(i));
+			f.menosDiaProf(i);
+		}
+}
 int main(){
-
+	Facu f;
+	f.criaProf("PS",1);
+	f.setDiaProfV("PS",10);
+	f.showSemanaProf("PS");
+	f.criaProf("Gui",1);
+	f.setDiaProfV("Gui",10);
+	f.showSemanaProf("Gui");
+	f.showSemana();
+	do{
+		CasoBase(f);
+	}while(!f.semanaPronta());
+	f.showSemanaProf("PS");
+	f.showSemanaProf("Gui");
+	f.showSemana();
+	return 0;	
+	
+	/* VERSAO ANTIGA
 	Facu f;
 	int ind;
 	while(!f.semanaPronta()){
@@ -18,7 +42,7 @@ int main(){
 	
 	std::cout<<"Hello World"<<std::endl;
 	return 0;
-
+	*/
 	/* TESTE CLASSE SEMANA
 	Semana s;
 	for(int i=0;i<12;i = i + 2)

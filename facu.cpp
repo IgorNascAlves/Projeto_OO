@@ -73,3 +73,6 @@ int Facu::getQuantProf(){
 int Facu::getIndDisp(int i){
 	return p[i].getIndDisp();
 }
+int Facu::getDiasDisp(int i){
+	return p[i].getQuantAulas();
+}
