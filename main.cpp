@@ -7,15 +7,36 @@ Objetivo: Segunda versão da implementacao do Algoritimo do projeto de Orientaca
 #include "semana.h"
 #include "prof.h"
 #include "facu.h"
+
+void Preenche(Facu* f,int i){
+			(*f).setDia((*f).getIndDisp(i),i+1);
+			(*f).limpaDiasProf((*f).getIndDisp(i));
+			(*f).menosDiaProf(i);
+}
 void CasoBase(Facu* f){
 	
 	for(int i=0;i<(*f).getQuantProf();i++){
 		if((*f).getDiasDisp(i) == 1){
-			(*f).setDia((*f).getIndDisp(i),i+1);
-			(*f).limpaDiasProf((*f).getIndDisp(i));
-			(*f).menosDiaProf(i);
+			Preenche(f,i);
 		}
 	}
+}
+int qualprof(Facu* f){
+		int MenorDisp = (*f).getDiasDisp(0);
+		int ind = 0;
+		for(int i=1;i<(*f).getQuantProf();i++){
+			if((*f).getDiasDisp(i) < MenorDisp){
+				MenorDisp = (*f).getDiasDisp(i);
+				ind = i;
+			}
+			else if((*f).getDiasDisp(i) == MenorDisp){
+				if((*f).getDiasDisp(i) > (*f).getDiasDisp(ind)){
+					MenorDisp = (*f).getDiasDisp(i);
+					ind = i;
+				}
+			}
+		}
+		return ind;
 }
 int main(){
 	Facu f;
@@ -33,13 +54,18 @@ int main(){
 	f.showSemanaProf("Gui");
 	
 	f.showSemana();
+	
 	do{
 		CasoBase(&f);
+		int ind =  qualprof(&f);
+		Preenche(&f,ind);
 	}while(!f.semanaPronta());
+	
 	f.showSemanaProf("Igor");
 	f.showSemanaProf("PS");
 	f.showSemanaProf("Gui");
 	f.showSemana();
+	
 	return 0;	
 	
 	/* VERSAO ANTIGA
