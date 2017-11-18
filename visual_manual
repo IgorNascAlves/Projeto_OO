@@ -1,0 +1,10 @@
+        for(int i=0;i<6;i++){
+            Semana[i] = new QCheckBox(tab_2);
+            Semana[i]->setObjectName(QStringLiteral("checkBox"));
+            Semana[i]->setGeometry(QRect(120+(100*i), 205, 92, 23));
+        }
+        for(int i=0;i<6;i++){
+            Semana[i+6] = new QCheckBox(tab_2);
+            Semana[i+6]->setObjectName(QStringLiteral("checkBox"));
+            Semana[i+6]->setGeometry(QRect(120+(100*i), 235, 92, 23));
+        }

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>817</width>
+    <height>527</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>800</width>
+      <height>500</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Prof</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>130</y>
+        <width>791</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>GroupBox</string>
+      </property>
+      <widget class="QTableWidget" name="tableWidget_Entrada">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>681</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <row>
+        <property name="text">
+         <string>Primeiro</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Segundo</string>
+        </property>
+       </row>
+       <column>
+        <property name="text">
+         <string>Seg</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Ter</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Qua</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Qui</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Sex</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Sab</string>
+        </property>
+       </column>
+       <item row="0" column="0">
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="pushButton_Criar">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>350</y>
+        <width>89</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Criar</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_Editar">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>350</y>
+        <width>89</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Editar</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_Excluir">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>350</y>
+        <width>89</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Excluir</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>67</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Nome:</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_Profs">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>50</y>
+        <width>86</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_Aulas">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>50</y>
+        <width>86</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Nome">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>50</y>
+        <width>113</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>50</y>
+        <width>81</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Lista Profs: </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>50</y>
+        <width>67</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Aulas:</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>330</y>
+        <width>92</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CheckBox</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Facu</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>130</y>
+        <width>791</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>GroupBox</string>
+      </property>
+      <widget class="QTableWidget" name="tableWidget_Saida">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>681</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <row>
+        <property name="text">
+         <string>Primeiro</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Segundo</string>
+        </property>
+       </row>
+       <column>
+        <property name="text">
+         <string>Seg</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Ter</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Qua</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Qui</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Sex</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Sab</string>
+        </property>
+       </column>
+       <item row="0" column="0">
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="pushButton_Preencher">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>350</y>
+        <width>89</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Preencher</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

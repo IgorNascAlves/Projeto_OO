@@ -1,61 +1,53 @@
-/*
-De: Igor do Nascimento Alves
-Data: 28/Outubro/2017
-Objetivo: Implementacao da classe Professor
-*/
 #include "prof.h"
-Prof::Prof(string nome, int quantAulas){
-	this->nome = nome;
-	this->quantAulas = quantAulas;
-	std::cout<<"Professor "<<nome<<" criado"<<endl;
+Prof::Prof(std::string Nome,int Aulas){
+    this->Nome = Nome;
+    this->Aulas = Aulas;
 }
-void Prof::setDia(int i,int valor){
-	s.setDia(i,valor);
+
+void Prof::setDiaV(int ind){
+    s.setDia(ind,1);
 }
-int Prof::getDia(int i){
-		return s.getDia(i);
+
+int Prof::getAulas(){
+    return Aulas;
+}
+
+std::string Prof::getNome(){
+    return Nome;
+}
+
+int Prof::getDia(int ind){
+    return s.getDia(ind);
+}
+
+void Prof::setDiaF(int ind){
+     s.setDia(ind,0);
+}
+
+void Prof::apagaDia(int ind){
+    setDiaF(ind);
+    if(Aulas>0)
+        Aulas = Aulas - 1;
+}
+
+double Prof::Prioridade(){
+
+    if(Disp()>0){
+        double teste = (Aulas*1.0/Disp()*1.0)*100.00;
+        return teste;
+    }
+    return 0;
+}
+int Prof::Disp(){
+    int soma=0;
+    for(int i=0;i<12;i++)
+        soma = soma + getDia(i);
+    return soma;
 }
 void Prof::showSemana(){
-	std::cout<<nome<<endl;
-	s.showSemana();
+    std::cout<<Nome<<std::endl;
+    s.ShowSemana();
 }
-void Prof::setProf(string nome,int quantAulas){
-	this->nome = nome;
-	this->quantAulas  = quantAulas;
-}
-string Prof::getProf(){
-	return nome;
-}
-void Prof::setQuantAulas(int quantAulas){
-	this->quantAulas = quantAulas;
-}
-int Prof::getQuantAulas(){
-	return quantAulas;
-}
-int Prof::getDiasDisp(){
-	int DiasDisp = 0;
-	for(int i=0;i<12;i++)
-		if(s.getDia(i))
-			DiasDisp++;
-	return DiasDisp;
-}
-void Prof::limparSemana(){
-	for(int i=0;i<12;i++)
-		s.setDia(i,0);
-}
-void Prof::menosQuantAulas(){
-	std::cout<<"ERA "<<getProf()<<" "<<getQuantAulas()<<endl;
-	if(quantAulas > 1)
-		quantAulas -= 1;
-	else{
-		quantAulas = 0;
-		limparSemana();
-	}
-	std::cout<<"EH "<<getProf()<<" "<<getQuantAulas()<<endl;
-}
-void Prof::setIndDisp(int i){
-	indDisp.push_back(int(i));
-}
-int Prof::getIndDisp(){
-	return indDisp[0];
+void Prof::setAulas(int Aulas){
+    this->Aulas = Aulas;
 }

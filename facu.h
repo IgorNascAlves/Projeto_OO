@@ -1,36 +1,41 @@
-/*
-De: Igor do Nascimento Alves
-Data: 28/Outubro/2017
-Objetivo: Interface da Classe Facu
-*/
 #ifndef FACU_H
 #define FACU_H
-#include <iostream>
 #include <vector>
-#include <cstring>
-#include "prof.h"      
-#include "semana.h"
-using namespace std;
+#include <string>
+#include"semana.h"
+#include"prof.h"
 class Facu{
-	public:
-		Facu();
-		void setDia(int,int);//Set dia da semana da Facu
-		int getDia(int);//Pega valor de um dia da Facu
-		void showSemana();//Mostra semana da Facu
-		bool semanaPronta();//Verifica se todos os profs tem 0 aulas
-		void criaProf(string,int);//Cria objeto prof (recebe nome e quantAulas)
-		void setDiaProfV(string,int);//Set dia como disp(1)
-		void setDiaProfF(string,int);//Set dia como ñ disp(0)
-		int diaMenosDisp();//retorna dia menos disp
-		void limpaDiasProf(int);//limpa vertical(dia dos profs)
-		void showSemanaProf(string);//mostra semana de um prof
-		int achaProf(string);//acha ind do professor
-		void menosDiaProf(int);//diminui quantAulas ou limpa Semana
-		int getQuantProf();// retorna quant profs
-		int getIndDisp(int);
-		int getDiasDisp(int);
-	private:
-		Semana s;
-		vector<Prof> p; 
+    public:
+        Facu();
+        void CriaProf(std::string,int);
+        std::string getNomeProf(int);
+        int getIndProf(std::string);
+        int getDia(int);
+        void showSemana();
+        int getQuantProfs();
+        bool checaNome(std::string);
+        //Algoritimo
+        bool SemanaPronta();
+        int MaiorPrioridade();
+        void Preenche(int);
+        int SomaD(int);
+        void ApagaDiaProfs(int,int);
+        void setDia(int,int);
+        int PrimeiroUm(int);
+        //Prof
+        void setDiaProfV(int,int);
+        void setDiaProfF(int,int);
+        void showSemanaProf(int);
+        int getDiaProf(int,int);
+        int getQuantAula(int);
+        void setAulasProf(int,int);
+        void backup();
+        void recovery();
+        void apagaProf(int);
+
+    private:
+        Semana s;
+        std::vector <Prof> p;
+        std::vector <Prof> p2;
 };
-#endif //def FACU_H
+#endif //FACU_H
